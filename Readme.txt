@@ -1,4 +1,10 @@
-﻿Crosscompile for diffrent os
+﻿MatrixCalc
+GPL3
+Program for matrix calculations.
+
+
+
+Crosscompile statements for different os:
 
 run in terminal in source directory.
 dotnet publish -c release -r win-x64 --self-contained
