@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace MatrixCalc
 {
-    public class Matrix<T>
+    public class Matrix<T> : IEquatable<Matrix<T>>
     {
         public readonly int Columns;
         public readonly int Rows;
@@ -161,5 +156,8 @@ namespace MatrixCalc
             get { return Values[i, j]; }
             set { Values[i, j] = value; }
         }
+        public bool Equals(Matrix<T> other) => this == other;
+        public override bool Equals(object obj) => this == (Matrix<T>)obj;
+        public override int GetHashCode() => HashCode.Combine(Values.GetHashCode(), Columns, Rows);
     }
 }
