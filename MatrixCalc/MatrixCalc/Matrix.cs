@@ -9,6 +9,7 @@ namespace MatrixCalc
         private T[,] Values;
         private Func<T, T, T> Add;
         private Func<T, T, T> Multiply;
+        public Matrix() { }
         public Matrix(int rows, int columns, Func<T, T, T> add, Func<T, T, T> multiply)
         {
             if (columns <= 0 || rows <= 0) { throw new Exception($"Columns and Rows can't be 0 or negative. Input: columns = {columns}; rows = {rows}"); }
@@ -30,7 +31,6 @@ namespace MatrixCalc
             }
             Values = res;
         }
-        public static Matrix<int> New(int rows, int columns) => new Matrix<int>(rows, columns, (a, b) => a + b, (a, b) => a * b);
         public static Matrix<T> operator +(Matrix<T> left, Matrix<T> right)
         {
             if (left.Columns != right.Columns || left.Rows != right.Rows)
