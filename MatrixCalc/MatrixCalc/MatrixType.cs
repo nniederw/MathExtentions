@@ -12,7 +12,5 @@
         public static Matrix<double> Double(double[,] values) => new Matrix<double>(values, (a, b) => a + b, (a, b) => a * b);
         public static Matrix<decimal> Decimal(int rows, int columns) => new Matrix<decimal>(rows, columns, (a, b) => a + b, (a, b) => a * b);
         public static Matrix<decimal> Decimal(decimal[,] values) => new Matrix<decimal>(values, (a, b) => a + b, (a, b) => a * b);
-        public static Matrix<int> New(this Matrix<int> matrix, int rows, int columns) => Int(rows, columns);
-        public static Matrix<long> New(this Matrix<long> matrix, int rows, int columns) => Long(rows, columns);
     }
 }
