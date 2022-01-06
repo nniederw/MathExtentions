@@ -30,6 +30,7 @@ namespace MatrixCalc
             }
             Values = res;
         }
+        public static Matrix<int> New(int rows, int columns) => new Matrix<int>(rows, columns, (a, b) => a + b, (a, b) => a * b);
         public static Matrix<T> operator +(Matrix<T> left, Matrix<T> right)
         {
             if (left.Columns != right.Columns || left.Rows != right.Rows)
