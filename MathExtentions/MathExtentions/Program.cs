@@ -4,15 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        for (int modulo = 3; modulo < 21; modulo++)
-        {
-            Console.WriteLine($"modulo {modulo}");
-            for (int i = 2; i < modulo; i++)
-            {
-                Console.Write($"{new ModuloNumber(modulo,i).MultInverse()} ");
-            }
-            Console.WriteLine();
-        }
-        var m = new ModuloNumber(5,1);
+        var r = new Rational(2, 4);
+        var r2 = r * r;
+        Console.WriteLine(r2);
+        Console.WriteLine(r+r);
+
     }
 }
