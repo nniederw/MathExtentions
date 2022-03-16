@@ -15,6 +15,14 @@ namespace MathExtentionsTests
             return new Rational(nomi, denom);
         }
         [Test]
+        public void RandomRationTest()
+        {
+            for(int i = 0; i < 100; i++)
+            {
+                RandomRational();
+            }
+        }
+        [Test]
         public void TestSimple()
         {
             var zero = new Rational(0);

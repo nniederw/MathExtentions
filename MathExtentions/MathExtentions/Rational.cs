@@ -37,6 +37,8 @@ namespace MathExtentions
         }
         private static int Gcd(int a, int b)
         {
+            a = Math.Abs(a);
+            b = Math.Abs(b);
             int min = Math.Min(a, b);
             Ext.Assert(min != 0);
             if (min == 1)
