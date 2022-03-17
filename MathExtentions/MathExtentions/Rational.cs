@@ -51,10 +51,9 @@ namespace MathExtentions
         }
         public static int Lcm(int a, int b)
         {
-            Console.WriteLine($"a {a}, b {b}");
             return checked(a * (b / Gcd(a, b)));
         }
-
+        public decimal ToDecimal() => ((decimal)Nominator) / Denominator;
         public static Rational operator +(Rational a, Rational b)
         {
             int lcm = Lcm(a.Denominator, b.Denominator);
